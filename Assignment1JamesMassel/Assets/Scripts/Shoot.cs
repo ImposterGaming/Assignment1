@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour {
 
     public GameObject bullet;
+    public GameObject firePoint;
     private float shootTimer = 0f;
     public float shootRate = .5f;
 
@@ -19,7 +20,10 @@ public class Shoot : MonoBehaviour {
         {
             if (shootTimer <= 0f)
             {
-                Instantiate(bullet, transform.position, transform.rotation);
+                if (bullet != null)
+                {
+                    Instantiate(bullet, firePoint.transform.position, transform.rotation);
+                }
                 Debug.Log("fired");
                 shootTimer = shootRate;
             } 

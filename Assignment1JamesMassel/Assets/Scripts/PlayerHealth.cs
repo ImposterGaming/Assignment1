@@ -5,39 +5,38 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
-    private int health;
-    public int startHealth = 3;
     public Text playerHealth;
 
+    public void Start()
+    {
+        playerHealth.text = "Lives: " + PlayerStats.Health.ToString();
+    }
 
-	void Start () {
-        health = startHealth;
-	}
-	
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        //collision with enemy
+        other.GetComponent<PlanetMovement>().DestroyPlanet();
         LoseHealth();
         UpdateHealthUI();
-        if (health <= 0)
-        {
-            Die();
-        }
     }
 
     public void Die()
     {
         Destroy(gameObject);
-        //game over code
+        //death effect goes here
     }
 
     public void LoseHealth()
     {
-        health -= 1;
+        PlayerStats.Health -= 1;
+        if (PlayerStats.Health <= 0)
+        {
+            Die();
+        }
     }
 
     public void UpdateHealthUI()
     {
-        playerHealth.text = health.ToString();
+        playerHealth.text = "Lives: " + PlayerStats.Health.ToString();
     }
 }
