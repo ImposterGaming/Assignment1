@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Assignment1JamesMassel, James Massel, Last Modified by James Massel Oct 20 2017, spawns the planets
+
 public class SpawnEnemy : MonoBehaviour {
 
     public Transform spawnPoint;
@@ -18,9 +20,10 @@ public class SpawnEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //spawns enemies in a random y axis range 
+    
 		if (timeBetweenTimer <= 0)
         {
+            //spawns enemies in a random y axis range 
             randomSpawnPoint = new Vector3(spawnPoint.position.x, spawnPoint.position.y + Random.Range(-13f, 13f), spawnPoint.position.z);
             SpawnPlanet(enemy);
             timeBetweenTimer = timeBetweenEnemies;
@@ -35,6 +38,7 @@ public class SpawnEnemy : MonoBehaviour {
 	}
     public void SpawnPlanet(GameObject enemyPrefab)
     {
+        //spawn planet
         Instantiate(enemyPrefab, randomSpawnPoint, spawnPoint.rotation);
     }
 }

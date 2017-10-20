@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Assignment1JamesMassel, James Massel, Last Modified by James Massel Oct 20m 2017, movement of the player
 public class PlayerMovement : MonoBehaviour {
 
     private float hInput;

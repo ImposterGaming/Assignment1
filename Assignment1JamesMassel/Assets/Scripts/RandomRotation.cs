@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Assignment1JamesMassel, James Massel, Last Modified by James Massel Oct 20 2017, rotates planets in a random rotaion
 public class RandomRotation : MonoBehaviour {
 
     private Vector3 planetRotation;

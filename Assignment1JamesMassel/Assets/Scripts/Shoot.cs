@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Assignment1JamesMassel, James Massel, Last Modified by James Massel Oct 20 2017, Shooting of the bullet prefab by the player
+
 public class Shoot : MonoBehaviour {
 
     public GameObject bullet;
