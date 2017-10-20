@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\BackgroundScroll.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\PlanetMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RandomRotation.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />

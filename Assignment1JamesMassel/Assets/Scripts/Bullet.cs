@@ -12,6 +12,13 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(speed, 0f, .0f);
+        transform.Translate(speed, 0f, 0f);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
+        Destroy(gameObject);
+    }
+
 }
